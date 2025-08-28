@@ -1,9 +1,10 @@
-let a = 1;
-let b = 2;
+// import hello from "./hello/hello.js";
+// import testFS from "./hello/fs.js";
+import TxtManager from "./hello/TxtManager.js";
 
-console.log("Hello World");
-console.log(a + b);
+// hello();
+// testFS();
 
-let c = "this is break point 1";
-
-console.log(c);
+TxtManager.makeTxtFile("test.txt", "Hello Worldfdfdfdfd", true);
+// TxtManager.readTxtFile("test.txt");
+console.log("index.js END");
