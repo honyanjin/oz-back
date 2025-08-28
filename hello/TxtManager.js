@@ -19,6 +19,7 @@ function makeTxtFile(fileName, content, isDateName = false) {
     }
     const filePath = path.join(RESULTS_DIR, fileName);
     if (fs.existsSync(filePath)) {
+        // fs.appendFileSync(filePath, content);
         const originContent = fs.readFileSync(filePath, "utf8");
         console.log(originContent);
         const newContent = originContent + "\n" + content;
