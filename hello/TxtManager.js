@@ -8,8 +8,6 @@ function makeResultsDir() {
 }
 
 function makeTxtFile(fileName, content, isDateName = false) {
-  console.log(fileName, content);
-  
   try {
     if (!fs.existsSync(RESULTS_DIR)) {
         makeResultsDir();
@@ -21,7 +19,6 @@ function makeTxtFile(fileName, content, isDateName = false) {
     if (fs.existsSync(filePath)) {
         // fs.appendFileSync(filePath, content);
         const originContent = fs.readFileSync(filePath, "utf8");
-        console.log(originContent);
         const newContent = originContent + "\n" + content;
         fs.writeFileSync(filePath, newContent);
     } else {
@@ -33,7 +30,6 @@ function makeTxtFile(fileName, content, isDateName = false) {
 }
 
 function readTxtFile(fileName) {
-  console.log(fileName);
   const filePath = path.join(RESULTS_DIR, fileName);
   const content = fs.readFileSync(filePath, "utf8");
   console.log(content);
