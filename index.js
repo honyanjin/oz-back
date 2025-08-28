@@ -1,8 +1,5 @@
-let a = 1;
-let b = 2;
+// import hello from "./hello/hello.js";
+import testFS from "./hello/fs.js";
 
-console.log("Hello World");
-console.log(a + b);
-
-let c = "this is break point";
-console.log(c);
+// hello();
+testFS();
