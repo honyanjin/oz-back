@@ -1,3 +1,4 @@
 .vscode
 results/
 node_modules/
+crawl_results/

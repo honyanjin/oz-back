@@ -2,10 +2,14 @@ import StaticScrapper from "./scrapper/static/static-scrapper.js";
 import DynamicScrapper from "./scrapper/dynamic/dynamic-scrapper.js";
 
 
-const respJson = await StaticScrapper.crawl();
-StaticScrapper.save(respJson);
-// DynamicScrapper.crawl();
+DynamicScrapper.crawl();
 
+
+
+
+
+// const respJson = await StaticScrapper.crawl(crawlUrl);
+// StaticScrapper.save(respJson);
 
 // import hello from "./hello/hello.js";
 // import testFS from "./hello/fs.js";
