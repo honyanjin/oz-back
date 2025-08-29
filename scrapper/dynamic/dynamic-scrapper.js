@@ -12,13 +12,14 @@ async function crawl() {
     const page = await browser.newPage();
     await page.goto(CRAWL_URL);
     // await page.waitForSelector('.iqAyT');
-    await wait(10000);
+    await wait(5000);
     
     // const content = await page.evaluate(() => {
     //     const contents = document.querySelectorAll(".title_area");
     //     return contents[0].innerText;
     // });
     // console.log(content);
+
     const mainPack = await page.evaluate(() => {
         return document.querySelector('#main_pack').innerText;
     });
